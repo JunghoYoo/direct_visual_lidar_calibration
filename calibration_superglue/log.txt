@@ -1,0 +1,165 @@
+Converting 6 bag(s)...
+  data1.bag -> data1.bag  image: 1920x1080
+  data2.bag -> data2.bag  image: 1920x1080
+  data3.bag -> data3.bag  image: 1920x1080
+  data4.bag -> data4.bag  image: 1920x1080
+  data5.bag -> data5.bag  image: 1920x1080
+  data6.bag -> data6.bag  image: 1920x1080
+Done.
+data_path: /tmp/input_bags
+dst_path : /tmp/preprocessed
+input_bags:
+- /tmp/input_bags/data3.bag
+- /tmp/input_bags/data5.bag
+- /tmp/input_bags/data6.bag
+- /tmp/input_bags/data2.bag
+- /tmp/input_bags/data4.bag
+- /tmp/input_bags/data1.bag
+topics in /tmp/input_bags/data1.bag:
+- /tf_static : tf2_msgs/TFMessage
+- /livox/imu : sensor_msgs/Imu
+- /livox/points : sensor_msgs/PointCloud2
+- /camera/color/camera_info : sensor_msgs/CameraInfo
+- /camera/color/image_raw/compressed : sensor_msgs/CompressedImage
+selected topics:
+- camera_info: /camera/color/camera_info
+- image      : /camera/color/image_raw/compressed
+- points     : /livox/points
+intensity_channel: intensity
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data1.bag
+       : topic=/camera/color/image_raw/compressed
+camera_model: plumb_bob
+image_size  : 1920 1080
+intrinsics  : 1332.57  1331.1 934.014 524.702
+dist_coeffs :   0.0663971   -0.139859  0.00273309 -0.00991878           0
+processing images and points (num_threads_per_bag=8)
+start processing /tmp/input_bags/data1.bag
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data1.bag
+       : topic=/camera/color/image_raw/compressed
+processed /tmp/input_bags/data1.bag
+start processing /tmp/input_bags/data2.bag
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data2.bag
+       : topic=/camera/color/image_raw/compressed
+processed /tmp/input_bags/data2.bag
+start processing /tmp/input_bags/data3.bag
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data3.bag
+       : topic=/camera/color/image_raw/compressed
+processed /tmp/input_bags/data3.bag
+start processing /tmp/input_bags/data4.bag
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data4.bag
+       : topic=/camera/color/image_raw/compressed
+processed /tmp/input_bags/data4.bag
+start processing /tmp/input_bags/data5.bag
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data5.bag
+       : topic=/camera/color/image_raw/compressed
+processed /tmp/input_bags/data5.bag
+start processing /tmp/input_bags/data6.bag
+warning: bag does not contain topic
+       : bag_filename=/tmp/input_bags/data6.bag
+       : topic=/camera/color/image_raw/compressed
+warning: large time gap between consecutive LiDAR frames!!
+       : current:1773944622.018973 last:1773944621.367850 diff:0.651124
+processed /tmp/input_bags/data6.bag
+lidar_points:6
+lidar_points[0]:4166409
+LiDAR FoV: 179.227[deg]
+save LiDAR images
+save meta data
+
+(canvas:1): dbind-WARNING **: 19:41:28.840: Couldn't connect to accessibility bus: Failed to connect to socket /run/user/1000/at-spi/bus_1: No such file or directory
+Gtk-Message: 19:41:28.850: Failed to load module "canberra-gtk-module"
+Gtk-Message: 19:41:28.851: Failed to load module "canberra-gtk-module"
+/root/catkin_ws/src/direct_visual_lidar_calibration/scripts/find_matches_superglue.py:136: MatplotlibDeprecationWarning: The get_cmap function was deprecated in Matplotlib 3.7 and will be removed two minor releases later. Use ``matplotlib.colormaps[name]`` or ``matplotlib.colormaps.get_cmap(obj)`` instead.
+  cmap = matplotlib.cm.get_cmap('turbo')
+****************************************************************************************************
+* WARNING: You are going to use SuperGlue that is not allowed to be used for commercial purposes!! *
+****************************************************************************************************
+Namespace(data_path='/tmp/preprocessed', force_cpu=False, keypoint_threshold=0.2, match_threshold=0.25, max_keypoints=1024, nms_radius=4, rotate_camera=0, rotate_lidar=0, show_keypoints=True, sinkhorn_iterations=50, superglue='outdoor')
+Running inference on device "cpu"
+processing data1.bag
+Loaded SuperPoint model
+Loaded SuperGlue model ("outdoor" weights)
+processing data2.bag
+Loaded SuperPoint model
+Loaded SuperGlue model ("outdoor" weights)
+processing data3.bag
+Loaded SuperPoint model
+Loaded SuperGlue model ("outdoor" weights)
+processing data4.bag
+Loaded SuperPoint model
+Loaded SuperGlue model ("outdoor" weights)
+processing data5.bag
+Loaded SuperPoint model
+Loaded SuperGlue model ("outdoor" weights)
+processing data6.bag
+Loaded SuperPoint model
+Loaded SuperGlue model ("outdoor" weights)
+loading /tmp/preprocessed/data1.bag.(png|ply)
+loading /tmp/preprocessed/data2.bag.(png|ply)
+loading /tmp/preprocessed/data3.bag.(png|ply)
+loading /tmp/preprocessed/data4.bag.(png|ply)
+loading /tmp/preprocessed/data5.bag.(png|ply)
+loading /tmp/preprocessed/data6.bag.(png|ply)
+estimating bearing vectors
+estimating rotation using RANSAC
+num_inliers: 4 / 82
+--- T_camera_lidar (RANSAC) ---
+ 0.0239693  -0.999574 -0.0166795          0
+  0.431177  0.0253893   -0.90191          0
+  0.901949  0.0144263   0.431601          0
+         0          0          0          1
+Ceres Solver Report: Iterations: 27, Initial cost: 3.896942e+04, Final cost: 3.800540e+04, Termination: CONVERGENCE
+--- T_camera_lidar (LSQ) ---
+ 0.00766788   -0.999969 -0.00194607    0.116276
+   0.438438  0.00511107   -0.898747   -0.110362
+   0.898729  0.00603826    0.438463   0.0438056
+          0           0           0           1
+loading /tmp/preprocessed/data1.bag.(png|ply)
+loading /tmp/preprocessed/data2.bag.(png|ply)
+loading /tmp/preprocessed/data3.bag.(png|ply)
+loading /tmp/preprocessed/data4.bag.(png|ply)
+loading /tmp/preprocessed/data5.bag.(png|ply)
+loading /tmp/preprocessed/data6.bag.(png|ply)
+use automatically estimated initial guess
+   0: f: 5.695287e+00 d: 0.00e+00 g: 4.59e-01 h: 0.00e+00 s: 0.00e+00 e:  0 it: 1.70e+00 tt: 1.70e+00
+   1: f: 5.692918e+00 d: 2.37e-03 g: 2.16e-01 h: 2.21e-03 s: 4.31e-03 e:  7 it: 3.37e+00 tt: 5.07e+00
+   2: f: 5.692375e+00 d: 5.43e-04 g: 1.55e-01 h: 1.27e-03 s: 1.75e-03 e:  2 it: 3.35e+00 tt: 8.42e+00
+   3: f: 5.691358e+00 d: 1.02e-03 g: 1.68e-01 h: 1.56e-03 s: 2.86e-03 e:  1 it: 1.69e+00 tt: 1.01e+01
+   4: f: 5.689835e+00 d: 1.52e-03 g: 1.44e-01 h: 8.63e-03 s: 2.90e-02 e:  1 it: 1.68e+00 tt: 1.18e+01
+   5: f: 5.686523e+00 d: 3.31e-03 g: 1.83e-01 h: 1.86e-02 s: 9.35e-02 e:  1 it: 1.70e+00 tt: 1.35e+01
+   6: f: 5.679427e+00 d: 7.10e-03 g: 2.77e-01 h: 4.03e-02 s: 6.60e-02 e:  1 it: 1.68e+00 tt: 1.52e+01
+   7: f: 5.675972e+00 d: 3.46e-03 g: 5.83e-01 h: 4.75e-02 s: 3.69e-02 e:  2 it: 3.32e+00 tt: 1.85e+01
+   8: f: 5.671504e+00 d: 4.47e-03 g: 5.52e-01 h: 3.51e-02 s: 1.00e+00 e:  1 it: 1.64e+00 tt: 2.01e+01
+   9: f: 5.665171e+00 d: 6.33e-03 g: 6.23e-01 h: 5.01e-02 s: 4.94e-01 e:  1 it: 1.65e+00 tt: 2.18e+01
+  10: f: 5.661582e+00 d: 3.59e-03 g: 3.53e-01 h: 1.59e-02 s: 1.00e+00 e:  1 it: 1.64e+00 tt: 2.34e+01
+  11: f: 5.660559e+00 d: 1.02e-03 g: 1.65e-01 h: 9.88e-03 s: 1.70e-01 e:  2 it: 3.32e+00 tt: 2.67e+01
+  12: f: 5.660387e+00 d: 1.72e-04 g: 8.16e-02 h: 2.43e-03 s: 3.07e-01 e:  2 it: 3.33e+00 tt: 3.01e+01
+  13: f: 5.660253e+00 d: 1.34e-04 g: 7.95e-02 h: 4.52e-03 s: 3.15e-01 e:  2 it: 3.38e+00 tt: 3.34e+01
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0320 19:43:27.638825   100 line_search.cc:773] Line search failed: Wolfe zoom phase failed to find a point satisfying strong Wolfe conditions within specified max_num_iterations: 20, (num iterations taken for bracketing: 1).
+   0: f: 5.666745e+00 d: 0.00e+00 g: 1.06e-01 h: 0.00e+00 s: 0.00e+00 e:  0 it: 1.57e+00 tt: 1.57e+00
+W0320 19:43:56.061484   100 line_search.cc:773] Line search failed: Wolfe zoom phase failed to find a point satisfying strong Wolfe conditions within specified max_num_iterations: 20, (num iterations taken for bracketing: 5).
+Automatic initial guess result found
+--- T_lidar_camera ---
+ 0.00766788    0.438438    0.898729  0.00812574
+  -0.999969  0.00511107  0.00603826    0.116572
+-0.00194607   -0.898747    0.438463   -0.118168
+          0           0           0           1
+Calibration result found
+--- T_lidar_camera ---
+  0.0138005    0.447839    0.894008    0.131895
+  -0.999841 -0.00388877   0.0173823   0.0318328
+  0.0112611   -0.894106    0.447715   -0.110965
+          0           0           0           1
+loading /tmp/preprocessed/data1.bag.(png|ply)
+loading /tmp/preprocessed/data2.bag.(png|ply)
+loading /tmp/preprocessed/data3.bag.(png|ply)
+loading /tmp/preprocessed/data4.bag.(png|ply)
+loading /tmp/preprocessed/data5.bag.(png|ply)
+loading /tmp/preprocessed/data6.bag.(png|ply)

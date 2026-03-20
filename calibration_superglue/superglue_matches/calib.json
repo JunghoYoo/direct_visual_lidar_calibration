@@ -1,0 +1,53 @@
+{
+  "camera": {
+    "camera_model": "plumb_bob",
+    "distortion_coeffs": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "intrinsics": [
+      1368.26257,
+      1366.96008,
+      967.16687,
+      541.67474
+    ]
+  },
+  "meta": {
+    "bag_names": [
+      "data1.bag",
+      "data2.bag",
+      "data3.bag",
+      "data4.bag",
+      "data5.bag",
+      "data6.bag"
+    ],
+    "camera_info_topic": "/camera/color/camera_info",
+    "data_path": "/tmp/input_bags",
+    "image_topic": "/camera/color/image_raw/compressed",
+    "intensity_channel": "intensity",
+    "points_topic": "/livox/points"
+  },
+  "results": {
+    "T_lidar_camera": [
+      0.06654968870043011,
+      0.03299276599644656,
+      -0.13283157598831166,
+      -0.3736223860218015,
+      0.3772777329572856,
+      -0.6017403133222019,
+      0.5966375953632871
+    ],
+    "init_T_lidar_camera_auto": [
+      0.033276571033608815,
+      0.07107497621514798,
+      -0.08945256042801401,
+      -0.3740415494891134,
+      0.3856525805929266,
+      -0.5987604369228946,
+      0.5940125802655226
+    ]
+  }
+}

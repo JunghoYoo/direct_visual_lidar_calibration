@@ -1,6 +1,7 @@
 ## My calibration reports with direct_visual_lidar_calibration
 
-* 📷+🔦 [Targetless Lidar-Camera Calibration: RealSense D435 & Livox Mid-360](calibration/readme.md)
+* 📷+🔦 [Targetless Lidar-Camera Calibration with manual matching: RealSense D435 & Livox Mid-360](calibration_manualmatching/readme.md)
+* 📷+🔦+🪝 [Targetless Lidar Camera Calibration with SuperGlue automatching](calibration_superglue/readme.md)
 
 ----------------------------------------------------------------------------------------------------------
 
